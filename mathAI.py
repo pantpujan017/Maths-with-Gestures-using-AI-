@@ -7,12 +7,16 @@ from PIL import Image
 import streamlit as st
 
 st.set_page_config(layout="wide")
-st.image("pi.jpg")
+st.image("img.png")
 
 col1,col2=st.columns([2,1])
 with col1:
     run=st.checkbox('Run',value=True)
-    FRAME_WINDOW=st.IMAGE([])
+    FRAME_WINDOW=st.image([])
+with col2:
+    output_text_area=st.title("Answer")
+    output_text_area=st.subheader("")
+
 
 
 
@@ -73,7 +77,7 @@ def sendToAI(model,canvas,fingers):
     if fingers==[1,1,1,1,0]:
         pil_image=Image.fromarray(canvas)
         response=model.generate_content(["Solve this Math Problem",pil_image])
-        print(response.text)
+        return response.text
 
 
 
@@ -81,6 +85,7 @@ def sendToAI(model,canvas,fingers):
 
 prev_pos=None
 canvas=None
+output_text=""
 
 # Continuously get frames from the webcam
 while True:
@@ -96,18 +101,21 @@ while True:
     info=getHandInfo(img)
     if info:
         fingers,lmlist=info
-        print(fingers)
         prev_pos, canvas = draw(info, prev_pos, canvas)
-        sendToAI(model,canvas,fingers)
+        output_text=sendToAI(model,canvas,fingers)
 
     image_combined=cv2.addWeighted(img,0.7,canvas,0.3,0)
+    FRAME_WINDOW.image(image_combined,channels="BGR")
+
+    if output_text:
+
+        output_text_area.text(output_text)
 
 
-
-    # Display the image in a window
-    # cv2.imshow("Image", img)
-    cv2.imshow("Canvas", canvas)
-    cv2.imshow("image_combined", image_combined)
+    # # Display the image in a window
+    # # cv2.imshow("Image", img)
+    # cv2.imshow("Canvas", canvas)
+    # cv2.imshow("image_combined", image_combined)
 
 
     # Keep the window open and update it for each frame; wait for 1 millisecond between frames
