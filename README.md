@@ -15,7 +15,7 @@ for real-time hand tracking and interactive UI, providing an intuitive and inter
 ## Installation
 To run this project on your local machine, follow these steps:
 
-Clone the repository: git clone git@github.com:pantpujan017/Maths-with-Gestures-using-AI-.git
+Clone the repository: git clone https://github.com/pantpujan017/Maths-with-Gestures-using-AI-.git
 
 Navigate to the project directory: cd Maths-with-Gestures-using-AI
 
