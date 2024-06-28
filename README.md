@@ -48,7 +48,8 @@ Push to the branch (git push origin feature-branch).
 Create a new Pull Request.
 
 Final Image of the project
-![Screenshot 2024-06-23 161505](https://github.com/pantpujan017/Maths-with-Gestures-using-AI-/assets/173246130/f25bd2c3-27e9-41fe-a22e-11c92390d6b6)
+![Screenshot 2024-06-28 161209](https://github.com/pantpujan017/Maths-with-Gestures-using-AI-/assets/173246130/3c3ffd87-fc9c-41e1-9580-ed5b614fa9d3)
+
 
 
 
