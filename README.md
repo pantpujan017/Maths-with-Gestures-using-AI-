@@ -5,12 +5,12 @@ for real-time hand tracking and interactive UI, providing an intuitive and inter
 
 *Table of Contents*
 
-Installation
-Usage
-Features
-How It Works
-Contributing
-License
+- Installation
+- Usage
+- Features
+- How It Works
+- Contributing
+- License
 
 ## Installation
 To run this project on your local machine, follow these steps:
@@ -46,8 +46,10 @@ Make your changes.
 Commit your changes (git commit -am 'Add new feature').
 Push to the branch (git push origin feature-branch).
 Create a new Pull Request.
+
 Final Image of the project
-Screenshot 2024-06-23 161505
+
+
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
